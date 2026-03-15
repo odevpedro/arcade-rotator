@@ -1,0 +1,60 @@
+# ArcadeOrchestrator — Catálogo de ROMs
+# Ajuste os rom_path para o local correto das suas ROMs.
+
+franchises:
+  - id: kof
+    name: "King of Fighters"
+    weight: 40
+    games:
+      - id: kof99
+        rom: kof99.zip
+        rom_path: "C:\\ROMs\\neogeo\\kof99.zip"
+        display_name: "KOF '99"
+        weight: 25
+        tags: [neogeo, fighter]
+      - id: kof2001
+        rom: kof2001.zip
+        rom_path: "C:\\ROMs\\neogeo\\kof2001.zip"
+        display_name: "KOF 2001"
+        weight: 25
+        tags: [neogeo, fighter]
+      - id: kof2002
+        rom: kof2002.zip
+        rom_path: "C:\\ROMs\\neogeo\\kof2002.zip"
+        display_name: "KOF 2002"
+        weight: 50
+        tags: [neogeo, fighter]
+
+  - id: garou
+    name: "Fatal Fury / Garou"
+    weight: 30
+    games:
+      - id: garou
+        rom: garou.zip
+        rom_path: "C:\\ROMs\\neogeo\\garou.zip"
+        display_name: "Garou: Mark of the Wolves"
+        weight: 70
+        tags: [neogeo, fighter]
+      - id: rbff2
+        rom: rbff2.zip
+        rom_path: "C:\\ROMs\\neogeo\\rbff2.zip"
+        display_name: "Real Bout Fatal Fury 2"
+        weight: 30
+        tags: [neogeo, fighter]
+
+  - id: mslug
+    name: "Metal Slug"
+    weight: 30
+    games:
+      - id: mslug3
+        rom: mslug3.zip
+        rom_path: "C:\\ROMs\\neogeo\\mslug3.zip"
+        display_name: "Metal Slug 3"
+        weight: 50
+        tags: [neogeo, run_and_gun]
+      - id: mslug5
+        rom: mslug5.zip
+        rom_path: "C:\\ROMs\\neogeo\\mslug5.zip"
+        display_name: "Metal Slug 5"
+        weight: 50
+        tags: [neogeo, run_and_gun]

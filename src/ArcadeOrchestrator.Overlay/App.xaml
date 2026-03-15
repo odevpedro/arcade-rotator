@@ -1,0 +1,17 @@
+<Application x:Class="ArcadeOrchestrator.Overlay.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <!-- Cores do tema arcade -->
+        <SolidColorBrush x:Key="OverlayBackground">#CC000000</SolidColorBrush>
+        <SolidColorBrush x:Key="AccentColor">#FFFF6600</SolidColorBrush>
+        <SolidColorBrush x:Key="TextPrimary">#FFFFFFFF</SolidColorBrush>
+        <SolidColorBrush x:Key="TextSecondary">#FFAAAAAA</SolidColorBrush>
+
+        <!-- Estilo base de texto -->
+        <Style TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource TextPrimary}" />
+            <Setter Property="FontFamily" Value="Consolas" />
+        </Style>
+    </Application.Resources>
+</Application>

@@ -3,7 +3,6 @@
 # Stack: C# 12 · .NET 8 · WPF · Windows 10/11
 # =============================================================================
 
-
 # ─── .NET / MSBuild ──────────────────────────────────────────────────────────
 bin/
 obj/
@@ -12,114 +11,65 @@ obj/
 *.userosscache
 *.sln.docstates
 project.lock.json
-project.fragment.lock.json
 artifacts/
-
-# NuGet
-*.nupkg
-*.snupkg
-.nuget/
 packages/
 !packages/repositories.config
-nuget.config.local
-
-# Publish
 publish/
 **/publish/
-**/PublishProfiles/
-
 
 # ─── Visual Studio ───────────────────────────────────────────────────────────
 .vs/
 *.VC.db
 *.VC.opendb
 *.pidb
-*.svclog
-*.scc
-_Chutzpah*
-ipch/
-*.aps
 *.ncb
 *.opendb
-*.opensdf
 *.sdf
 *.cachefile
-*.VC.VC.opendb
 *.psess
 *.vsp
 *.vspx
-*.sap
-*.e2e
 TestResult.xml
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
-*.log
-
 
 # ─── Rider / JetBrains ───────────────────────────────────────────────────────
 .idea/
 *.sln.iml
-
 
 # ─── VS Code ─────────────────────────────────────────────────────────────────
 .vscode/
 !.vscode/extensions.json
 !.vscode/settings.json
 
-
 # ─── ArcadeOrchestrator — Logs de runtime ────────────────────────────────────
-# Gerados automaticamente pelo Serilog e pelo RotationHistoryWriter
 logs/
 !logs/.gitkeep
 
-
 # ─── ArcadeOrchestrator — Config local ───────────────────────────────────────
-# Nunca versionar caminhos pessoais de ROMs e emuladores.
-# Use config.yaml como template e config.local.yaml para sua máquina.
 config/config.local.yaml
 config/catalog.local.yaml
-
-# Mas versiona os templates de exemplo:
 !config/config.yaml
 !config/catalog.yaml
 
-
 # ─── ArcadeOrchestrator — Dados de sessão ────────────────────────────────────
-# Histórico de rotações gerado em runtime
-logs/rotation-history.jsonl
 *.jsonl
-
 
 # ─── Windows ─────────────────────────────────────────────────────────────────
 Thumbs.db
-Thumbs.db:encryptable
-ehthumbs.db
-ehthumbs_vista.db
 Desktop.ini
 $RECYCLE.BIN/
 *.lnk
-*.stackdump
-
 
 # ─── Cobertura de testes ─────────────────────────────────────────────────────
 coverage/
-coverage.json
-coverage.cobertura.xml
 TestResults/
 *.trx
 *.coveragexml
 lcov.info
 
-
-# ─── Ferramentas de análise ───────────────────────────────────────────────────
-BenchmarkDotNet.Artifacts/
-.sass-cache/
-
-
 # ─── Certificados e segredos ─────────────────────────────────────────────────
 *.pfx
 *.p12
-*.cer
 *.key
 secrets.json
-appsettings.local.json

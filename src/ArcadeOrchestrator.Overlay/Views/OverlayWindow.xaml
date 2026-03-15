@@ -1,0 +1,61 @@
+<Window x:Class="ArcadeOrchestrator.Overlay.Views.OverlayWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ArcadeOrchestrator Overlay"
+        Background="Transparent"
+        AllowsTransparency="True"
+        WindowStyle="None"
+        Topmost="True"
+        ShowInTaskbar="False"
+        IsHitTestVisible="False"
+        SizeToContent="WidthAndHeight">
+
+    <Border Background="{StaticResource OverlayBackground}"
+            CornerRadius="8"
+            Padding="12,8"
+            MinWidth="240">
+        <StackPanel>
+
+            <!-- Jogo atual -->
+            <TextBlock Text="▶ JOGANDO AGORA"
+                       FontSize="9"
+                       Foreground="{StaticResource AccentColor}"
+                       FontWeight="Bold"
+                       Margin="0,0,0,2"/>
+
+            <TextBlock x:Name="CurrentGameText"
+                       Text="—"
+                       FontSize="14"
+                       FontWeight="Bold"
+                       Margin="0,0,0,6"/>
+
+            <!-- Próximo jogo -->
+            <TextBlock Text="PRÓXIMO"
+                       FontSize="9"
+                       Foreground="{StaticResource TextSecondary}"
+                       Margin="0,0,0,2"/>
+
+            <TextBlock x:Name="NextGameText"
+                       Text="—"
+                       FontSize="11"
+                       Foreground="{StaticResource TextSecondary}"
+                       Margin="0,0,0,6"/>
+
+            <!-- Rodapé: tempo e rotações -->
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="SessionTimeText"
+                           Text="00:00"
+                           FontSize="10"
+                           Foreground="{StaticResource TextSecondary}"/>
+                <TextBlock Text=" | "
+                           FontSize="10"
+                           Foreground="{StaticResource TextSecondary}"/>
+                <TextBlock x:Name="RotationCountText"
+                           Text="0 rotações"
+                           FontSize="10"
+                           Foreground="{StaticResource TextSecondary}"/>
+            </StackPanel>
+
+        </StackPanel>
+    </Border>
+</Window>
