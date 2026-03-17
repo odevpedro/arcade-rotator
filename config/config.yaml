@@ -1,54 +1,24 @@
-# ArcadeOrchestrator — Configuração Principal
-# Documentação: docs/system-feature-flows.md
-
-orchestrator:
-  mode: festa
-  cooldown_between_games_seconds: 5
-  overlay:
-    enabled: true
-    position: top_right
-    opacity: 0.85
-    font_size: 14
-    show_next_game: true
-    countdown_seconds: 10
-
-emulator:
-  type: retroarch                                          # retroarch | fbneo
-  executable_path: "C:\\RetroArch\\retroarch.exe"
-  core_path: "C:\\RetroArch\\cores\\fbneo_libretro.dll"
-  extra_args: ""
-  window_mode: borderless                                  # borderless | exclusive
-  log_file_path: "C:\\RetroArch\\logs\\retroarch.log"
-
-hotkeys:
-  skip_game: "Ctrl+Alt+N"
-  restart_game: "Ctrl+Alt+R"
-  pause_rotation: "Ctrl+Alt+P"
-  open_config: "Ctrl+Alt+C"
-  force_quit: "Ctrl+Alt+Q"
-
-rotation:
-  anti_repeat_count: 3
-  franchise_bias: 0.4
-
 detection:
   default:
     strategy: timeout
-    timeout_seconds: 90
-    fallback_action: next_game
-    process_watch_enabled: true
+    timeout_seconds: 90             # fallback sempre presente
+
   overrides:
     kof99.zip:
-      strategy: composite
-      timeout_seconds: 120
-    kof2001.zip:
-      strategy: composite
-      timeout_seconds: 110
+      strategy: fbneo_session
+      fbneo_neo_ram_base: 0x2A400000  # descoberto via Cheat Engine
+      continue_window_seconds: 15     # KOF99 dá ~10s de continue
+      
+    kof2002.zip:
+      strategy: fbneo_session
+      fbneo_neo_ram_base: 0x2A400000
+      continue_window_seconds: 15
+
     garou.zip:
-      strategy: log_parser
-      log_pattern: "Game Over"
-      fallback_to_timeout: true
-      timeout_seconds: 150
-    mslug3.zip:
-      strategy: composite
-      timeout_seconds: 100
+      strategy: fbneo_session
+      fbneo_neo_ram_base: 0x2A400000
+      continue_window_seconds: 12     # Garou tem janela menor
+
+rotation:
+  franchise_bias: 0.85   # alta probabilidade de manter na mesma franquia
+  anti_repeat_count: 2   # evita repetir o jogo imediatamente

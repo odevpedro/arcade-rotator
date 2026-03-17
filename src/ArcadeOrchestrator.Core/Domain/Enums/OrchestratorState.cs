@@ -4,6 +4,8 @@ public enum OrchestratorState
 {
     Idle,
     Launching,
+    InjectingCredits,  // ← novo
+    WaitingAttract,    // ← novo
     Playing,
     DetectingEnd,
     Cooldown,
